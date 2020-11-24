@@ -32,6 +32,10 @@
     - [+](#-2)
       - [Ejemplo](#ejemplo-6)
     - [Combinando delimitadores](#combinando-delimitadores)
+  - [Los contadores {1,4}](#los-contadores-14)
+    - [Ejemplo](#ejemplo-7)
+    - [Ejemplo](#ejemplo-8)
+    - [Ejemplo](#ejemplo-9)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -200,3 +204,35 @@ Primero puede haber uno o más dígitos, lo siguiente debe ser uno o más caract
 \d*[a-z]?s\d*
 
 ```
+
+## Los contadores {1,4}
+
+Los contadores nos sirve para limitar exactamente el numero de caracteres que deseamos delimitar.
+
+### Ejemplo
+
+Delimitamos dos dígitos.
+
+```regex
+\d{2,2}
+```
+
+> _En algunos lenguajes también podemos utilizar esta misma expresión de una manera más abreviada {2,2}_
+
+### Ejemplo
+
+Delimitamos desde al menos 4 dígitos hasta n numero de dígitos.
+
+```regex
+\d{4,}
+```
+
+### Ejemplo
+
+Delimitamos exactamente dos dígitos al inicio, puede seguir un `-` ó `.` ó ` `, seguido de exactamente dos dígitos, puede seguir un `-` ó `.` ó ` `, por ultimo, dos dígitos al final de la expresión.
+
+```regex
+\d{2,2}[\-\. ]{0,1}\d{2,2}[\-\. ]?\d{2,2}
+```
+
+> _`\` nos permite escapar caracteres reservados_
