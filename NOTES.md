@@ -36,6 +36,12 @@
     - [Ejemplo](#ejemplo-7)
     - [Ejemplo](#ejemplo-8)
     - [Ejemplo](#ejemplo-9)
+  - [El caso de (?) como delimitador](#el-caso-de--como-delimitador)
+    - [Ejemplo](#ejemplo-10)
+    - [Ejemplo](#ejemplo-11)
+  - [Not (^), su uso y sus peligros](#not--su-uso-y-sus-peligros)
+    - [Ejemplo](#ejemplo-12)
+    - [Ejemplo](#ejemplo-13)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -236,3 +242,43 @@ Delimitamos exactamente dos dígitos al inicio, puede seguir un `-` ó `.` ó ` 
 ```
 
 > _`\` nos permite escapar caracteres reservados_
+
+## El caso de (?) como delimitador
+
+El `?` puede tener el comportamiento cómo un delimitador **lazy**, esto quiere decir que puede acortar el match de la expresión, a lo más pequeño posible.
+
+### Ejemplo
+
+Coincide con cualquier carácter uno o más veces, delimitando el match a la expresión más pequeña que pueda cumplir.
+
+```regex
+.+?
+```
+
+### Ejemplo
+
+Coincide con cualquier carácter una o más veces, seguido de específicamente una `,` ó `\n` (salto de linea), delimitando el match a la expresión más pequeña que pueda cumplir.
+
+```regex
+.+[,\n]{1,1}
+```
+
+## Not (^), su uso y sus peligros
+
+El `^` nos permite negar el una clase.
+
+### Ejemplo
+
+Encuentra todo lo que no sea un dígito del `0` al `5` ó un carácter de la `a` hasta la `c`.
+
+```regex
+[^0-5a-c]
+```
+
+### Ejemplo
+
+También podemos realizar negaciones de clases predefinidas con el carácter en mayúscula, busca todo lo que no sea un dígito.
+
+```regex
+\D
+```
