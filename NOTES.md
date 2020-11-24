@@ -44,6 +44,8 @@
     - [Ejemplo](#ejemplo-13)
   - [Reto: Filtrando letras en números telefónicos utilizando negaciones](#reto-filtrando-letras-en-números-telefónicos-utilizando-negaciones)
     - [Solución](#solución-1)
+  - [Principio (^) y final de linea ($)](#principio--y-final-de-linea-)
+    - [Ejemplo](#ejemplo-14)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -300,4 +302,18 @@ Expresión regular que haga match con todas las linea, exceptuando la ultima.
 
 ```regex
 (\d{2,2}\W?){3,3}
+```
+
+## Principio (^) y final de linea ($)
+
+El `^` se utiliza para indicar el principio de la linea.
+
+El `$` se utiliza para indicar el fin de la linea.
+
+### Ejemplo
+
+Esta expresión regular cumple con el formato de un archivo `.csv` de tres columnas, haciendo el match en toda la línea, gracias al `^` indicado al inicio y el `$` indicado al fin de la expresión.
+
+```regex
+^\w+,\w+,\w+$
 ```
