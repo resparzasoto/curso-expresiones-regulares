@@ -42,6 +42,8 @@
   - [Not (^), su uso y sus peligros](#not--su-uso-y-sus-peligros)
     - [Ejemplo](#ejemplo-12)
     - [Ejemplo](#ejemplo-13)
+  - [Reto: Filtrando letras en números telefónicos utilizando negaciones](#reto-filtrando-letras-en-números-telefónicos-utilizando-negaciones)
+    - [Solución](#solución-1)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -281,4 +283,21 @@ También podemos realizar negaciones de clases predefinidas con el carácter en 
 
 ```regex
 \D
+```
+
+## Reto: Filtrando letras en números telefónicos utilizando negaciones
+
+Expresión regular que haga match con todas las linea, exceptuando la ultima.
+
+- 555658
+- 56-58-11
+- 56.58.11
+- 56.78-98
+- 65 09 87
+- **76y87r98**
+
+### Solución
+
+```regex
+(\d{2,2}\W?){3,3}
 ```
