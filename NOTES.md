@@ -46,6 +46,9 @@
     - [Solución](#solución-1)
   - [Principio (^) y final de linea ($)](#principio--y-final-de-linea-)
     - [Ejemplo](#ejemplo-14)
+  - [Logs](#logs)
+    - [Ejemplo](#ejemplo-15)
+    - [Ejemplo](#ejemplo-16)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -316,4 +319,24 @@ Esta expresión regular cumple con el formato de un archivo `.csv` de tres colum
 
 ```regex
 ^\w+,\w+,\w+$
+```
+
+## Logs
+
+Las expresiones regulares son muy útiles para encontrar líneas específicas que nos dicen algo muy puntual dentro de los archivos de logs que pueden llegar a tener millones de líneas.
+
+### Ejemplo
+
+Busca direcciones IP
+
+```regex
+(\d{1,3}\.){3,3}(\d{2,2}){1,1}
+```
+
+### Ejemplo
+
+Busca las lineas que contengan la información de [LOG] y usuario.
+
+```regex
+^\[LOG.*\[LOG\].*user:@.*\] .*$
 ```
