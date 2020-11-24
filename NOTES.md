@@ -2,6 +2,37 @@
 
 **_Alberto Alcocer_**
 
+- [Curso de Expresiones Regulares](#curso-de-expresiones-regulares)
+  - [2. El lenguaje: caracteres, operadores, y construcciones](#2-el-lenguaje-caracteres-operadores-y-construcciones)
+    - [El carácter (.)](#el-carácter-)
+      - [¿Qué es un archivo?](#qué-es-un-archivo)
+      - [¿Qué es una cadena de caracteres?](#qué-es-una-cadena-de-caracteres)
+      - [Ejemplos](#ejemplos)
+        - [Encuentra todo lo que sea un carácter](#encuentra-todo-lo-que-sea-un-carácter)
+        - [Encuentra todo lo que sea un carácter, seguido de un espacio](#encuentra-todo-lo-que-sea-un-carácter-seguido-de-un-espacio)
+        - [Encuentra 10 caracteres seguidos en toda la linea](#encuentra-10-caracteres-seguidos-en-toda-la-linea)
+  - [Las clases predefinidas y construidas](#las-clases-predefinidas-y-construidas)
+    - [Clases predefinidas](#clases-predefinidas)
+      - [\d](#d)
+        - [Ejemplo](#ejemplo)
+      - [\w](#w)
+        - [Ejemplo](#ejemplo-1)
+      - [\s](#s)
+        - [Ejemplo](#ejemplo-2)
+    - [Clases construidas](#clases-construidas)
+    - [Escapar caracteres `\`](#escapar-caracteres-)
+      - [Ejemplo](#ejemplo-3)
+    - [Reto de hexadecimal](#reto-de-hexadecimal)
+      - [Solución](#solución)
+  - [Los delimitadores: +, *, ?](#los-delimitadores---)
+    - [*](#)
+      - [Ejemplo](#ejemplo-4)
+    - [?](#-1)
+      - [Ejemplo](#ejemplo-5)
+    - [+](#-2)
+      - [Ejemplo](#ejemplo-6)
+    - [Combinando delimitadores](#combinando-delimitadores)
+
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
 ### El carácter (.)
@@ -116,4 +147,56 @@ Crear una expresión regular que busque el patrón de un numero hexadecimal.
 
 ```regex
 [a-fA-F0-9]{6}
+```
+
+## Los delimitadores: +, *, ?
+
+Vamos a encontrar dos tipos de conteos en nuestras expresiones regulares
+
+- Que existan
+- Que no existan
+
+### *
+
+Indica que puede existir **cero** o **n veces** el carácter.
+
+#### Ejemplo
+
+Indica que puede existir **cero** o **n caracteres** de cualquier tipo.
+
+```regex
+.*
+```
+
+### ?
+
+Indica que puede existir **cero** o **solamente una vez** el carácter.
+
+#### Ejemplo
+
+Indica que puede existir **cero** o **solamente una vez** un carácter numérico.
+
+```regex
+\d?
+```
+
+### +
+
+Indica que debe existir **uno** o **n veces** el carácter indicado.
+
+#### Ejemplo
+
+Indica que debe existir **uno** o **más** caracteres de palabras.
+
+```regex
+\w+
+```
+
+### Combinando delimitadores
+
+Primero puede haber uno o más dígitos, lo siguiente debe ser uno o más caracteres de la a-z en minúscula, lo siguiente debe ser una s en minúscula, por ultimo, puede haber uno o más dígitos.
+
+```regex
+\d*[a-z]?s\d*
+
 ```
