@@ -51,6 +51,8 @@
     - [Ejemplo](#ejemplo-16)
   - [Teléfonos](#teléfonos)
     - [Ejemplo](#ejemplo-17)
+  - [URLs](#urls)
+    - [Ejemplo](#ejemplo-18)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -353,4 +355,26 @@ Busca números telefónicos con distintos formatos
 ^\+?\d{2,3}[^\dA-z]?\d{2,3}[\dA-z]?\d{2,3}$
 ```
 
+ó
+
+```regex
+^\+?(\d{2,3}\W?){3,3}[pe#]?\d*$
+```
+
 > _Nota: con la expresión `[A-z]` indicamos minúsculas y mayúsculas_
+
+## URLs
+
+Una de las cosas que más vamos a usar en la vida, seamos frontend o backend, serán directamente dominios o direcciones de internet; ya sea direcciones completas de archivo (una url) o puntualmente dominios para ver si es correcto un mail o no.
+
+### Ejemplo
+
+```regex
+https?:\/\/[\w\-\.]+\.\w{2,5}\/?\S*
+```
+
+ó
+
+```regex
+https?:\/\/[\w\-\.]+\/?.*
+```
