@@ -49,6 +49,8 @@
   - [Logs](#logs)
     - [Ejemplo](#ejemplo-15)
     - [Ejemplo](#ejemplo-16)
+  - [Teléfonos](#teléfonos)
+    - [Ejemplo](#ejemplo-17)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -340,3 +342,15 @@ Busca las lineas que contengan la información de [LOG] y usuario.
 ```regex
 ^\[LOG.*\[LOG\].*user:@.*\] .*$
 ```
+
+## Teléfonos
+
+### Ejemplo
+
+Busca números telefónicos con distintos formatos
+
+```regex
+^\+?\d{2,3}[^\dA-z]?\d{2,3}[\dA-z]?\d{2,3}$
+```
+
+> _Nota: con la expresión `[A-z]` indicamos minúsculas y mayúsculas_
