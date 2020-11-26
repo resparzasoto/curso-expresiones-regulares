@@ -59,6 +59,11 @@
     - [Ejemplo](#ejemplo-20)
     - [Ejemplo](#ejemplo-21)
     - [Ejemplo](#ejemplo-22)
+  - [Nombres(?) Reto](#nombres-reto)
+    - [Solución](#solución-2)
+  - [Búsqueda y reemplazo](#búsqueda-y-reemplazo)
+    - [Los paréntesis](#los-paréntesis)
+    - [Remplazo](#remplazo)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -422,3 +427,42 @@ Obtener en base a what3words
 ```regex
 ^[a-z]{3,}\.[a-z]{3,}\.[a-z]{3,}$
 ```
+
+## Nombres(?) Reto
+
+Expresión regular que cumplan con el formato de nombres de nuestro país
+
+Rodrigo JimÃ©nez GutiÃ©rrez
+Rodrigo Jiménez Gutiérrez
+Jhon Beltrán
+Jhon Fredy Beltrán
+Jhon Fredy Beltrán León
+Ándres Alberto
+Juan Carlos Herrera Martínez
+Andrés de Jesús Montes Rodríguez
+
+### Solución
+
+```regex
+^([A-ZÑÁÉÍÓÚ][a-zñáéíóú]+\s?){3,4}$
+```
+
+## Búsqueda y reemplazo
+
+Al igual que una navaja suiza, las expresiones regulares son una herramienta increíblemente útil pero tienes que darle la importancia y las responsabilidades adecuadas a cada una, ya que no son la panacea, no solucionan todos los problemas.
+
+El uso más conveniente de las expresiones regulares es buscar coincidencias o matches de cadenas en un texto, y si es necesario, reemplazarlas con un texto diferente.
+
+### Los paréntesis
+
+Los paréntesis `()` sirven para agrupar caracteres. Tiene algunas diferencias notables a los paréntesis cuadrados.
+Entre ellas se puede usar caracteres especiales conservan su significado dentro de los paréntesis.
+Utilizando dentro del paréntesis una barra `|` podemos separar y hacer búsquedas similares. Ejemplo: (este|oeste|norte|sur).
+
+```regex
+^\d+::([\w\s:,\(\)'\.\-&!\/]+)\s\((\d{4,4})\)::.*$
+```
+
+### Remplazo
+
+Podemos utilizar $n para realizar el remplazo de las agrupaciones realizas con `()`, teniendo el increible potencial de poder archivos con sintaxis .sql, .json, etc.
