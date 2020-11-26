@@ -53,6 +53,12 @@
     - [Ejemplo](#ejemplo-17)
   - [URLs](#urls)
     - [Ejemplo](#ejemplo-18)
+  - [Mails](#mails)
+    - [Ejemplo](#ejemplo-19)
+  - [Locaciones](#locaciones)
+    - [Ejemplo](#ejemplo-20)
+    - [Ejemplo](#ejemplo-21)
+    - [Ejemplo](#ejemplo-22)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -377,4 +383,42 @@ https?:\/\/[\w\-\.]+\.\w{2,5}\/?\S*
 
 ```regex
 https?:\/\/[\w\-\.]+\/?.*
+```
+
+## Mails
+
+Quedamos en que ya podemos definir URLs, y dentro de las URLs están los dominios. No es infalible, pero es muy útil para detectar la gran mayoría de errores que cometen los usuarios al escribir sus emails.
+
+### Ejemplo
+
+```regex
+[\w\._]{5,30}\+?[\w]{0,10}@[\w\.]{3,}\.\w{2,5}
+```
+
+## Locaciones
+
+Esta clase nos va a servir para ver unos tips comunes de qué hacer y sobre todo qué no hacer con expresiones regulares, usando como ejemplo datos de posicionamiento en el mapa: latitud y longitud.
+
+### Ejemplo
+
+Obtener en base latitud y longitud
+
+```regex
+^\-?\d{1,3}\.\d{1,6},\s?\-?\d{1,3}\.\d{1,6},.*$
+```
+
+### Ejemplo
+
+Obtener en base a radiales
+
+```regex
+^\-?\d{1,3}\s\d{1,2}'\s\d{1,2}\.\d{2,2}"[WE],\s?\-?\d{1,3}\s\d{1,2}'\s\d{1,2}\.\d{2,2}"[NS]$
+```
+
+### Ejemplo
+
+Obtener en base a what3words
+
+```regex
+^[a-z]{3,}\.[a-z]{3,}\.[a-z]{3,}$
 ```
