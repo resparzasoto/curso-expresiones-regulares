@@ -69,6 +69,7 @@
   - [Uso de REGEX para descomponer querys GET](#uso-de-regex-para-descomponer-querys-get)
     - [Ejemplo](#ejemplo-23)
       - [Solución](#solución-3)
+  - [Explicación del Proyecto](#explicación-del-proyecto)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -501,3 +502,17 @@ Replace
 ```regex
 \n - $1 => $2
 ```
+
+## Explicación del Proyecto
+
+Vamos a utilizar un archivo de resultados de partidos de fútbol histórico con varios datos. El archivo es un csv de más de 39000 líneas diferentes.
+
+Con cada lenguaje intentaremos hacer una solución un poquito diferente para aprovecharlo y saber cómo utilizar expresiones regulares en cada uno de los lenguajes.
+
+Usaremos las expresiones regulares en:
+
+- Perl
+- PHP
+- Python
+- Javascript
+
