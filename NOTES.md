@@ -72,6 +72,9 @@
   - [Explicación del Proyecto](#explicación-del-proyecto)
   - [Perl](#perl)
   - [PHP](#php)
+  - [Utilizando PHP en la práctica](#utilizando-php-en-la-práctica)
+    - [Banderas](#banderas)
+    - [Tabs](#tabs)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -521,3 +524,22 @@ Usaremos las expresiones regulares en:
 ## Perl
 
 ## PHP
+
+## Utilizando PHP en la práctica
+
+### Banderas
+
+Las expresiones regulares pueden tener banderas que afectan la búsqueda, estás deberán de estar al final de la línea.
+
+- i : la búsqueda es case-insensitive
+- g : la búsqueda busca todas las coincidencias, sin ella, solo se devuelve la primera coincidencia
+- m : modo multiline
+- s : habilita el modo *dotall*, que permite  un punto para que coincida con el carácter de nueva línea `\n`
+- u : permite el soporte completo de unicode
+- y : modo *adhesivo* búsqueda en la posición exacta del texto
+
+[list-of-flags-in-js](https://javascript.info/regexp-introduction#flags)
+
+### Tabs
+
+Los tabs `\t` por lo particular intentan recorrer múltiplos de 8 espacios, aunque esto depende del OS.
