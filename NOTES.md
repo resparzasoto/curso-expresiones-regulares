@@ -71,6 +71,7 @@
       - [Solución](#solución-3)
   - [Explicación del Proyecto](#explicación-del-proyecto)
   - [Perl](#perl)
+  - [PHP](#php)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -519,3 +520,4 @@ Usaremos las expresiones regulares en:
 
 ## Perl
 
+## PHP
