@@ -61,9 +61,14 @@
     - [Ejemplo](#ejemplo-22)
   - [Nombres(?) Reto](#nombres-reto)
     - [Solución](#solución-2)
+- [4. Usos avanzados en expresiones regulares](#4-usos-avanzados-en-expresiones-regulares)
   - [Búsqueda y reemplazo](#búsqueda-y-reemplazo)
     - [Los paréntesis](#los-paréntesis)
     - [Remplazo](#remplazo)
+- [5. Expresiones regulares en lenguajes de programación](#5-expresiones-regulares-en-lenguajes-de-programación)
+  - [Uso de REGEX para descomponer querys GET](#uso-de-regex-para-descomponer-querys-get)
+    - [Ejemplo](#ejemplo-23)
+      - [Solución](#solución-3)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -447,6 +452,8 @@ Andrés de Jesús Montes Rodríguez
 ^([A-ZÑÁÉÍÓÚ][a-zñáéíóú]+\s?){3,4}$
 ```
 
+# 4. Usos avanzados en expresiones regulares
+
 ## Búsqueda y reemplazo
 
 Al igual que una navaja suiza, las expresiones regulares son una herramienta increíblemente útil pero tienes que darle la importancia y las responsabilidades adecuadas a cada una, ya que no son la panacea, no solucionan todos los problemas.
@@ -465,4 +472,32 @@ Utilizando dentro del paréntesis una barra `|` podemos separar y hacer búsqued
 
 ### Remplazo
 
-Podemos utilizar $n para realizar el remplazo de las agrupaciones realizas con `()`, teniendo el increible potencial de poder archivos con sintaxis .sql, .json, etc.
+Podemos utilizar $n para realizar el remplazo de las agrupaciones realizas con `()`, teniendo el increíble potencial de poder archivos con sintaxis .sql, .json, etc.
+
+``$1, $2, $3, $n...`` indicarán la agrupación a remplazar en el orden de lectura.
+
+# 5. Expresiones regulares en lenguajes de programación
+
+## Uso de REGEX para descomponer querys GET
+
+Al hacer consultas a sitios web mediante el método GET se envían todas las variables al servidor a través de la misma URL.
+
+La parte de esta url que viene luego del signo de interrogación ? se le llama query del request que es: variable1=valor1&variable2=valor2&... y así tantas veces como se necesite. En esta clase veremos como extraer estas variables usando expresiones regulares.
+
+### Ejemplo
+
+`https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx&s_photo=fotografia&mode=search&module=blog`
+
+#### Solución
+
+Find
+
+```regex
+[\?&]([\w-]+)=([^&\n]+)
+```
+
+Replace
+
+```regex
+\n - $1 => $2
+```

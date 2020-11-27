@@ -7,6 +7,7 @@
 12345678910a
 13453243
 url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
+url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx&s=fotografia&mode=search&module=blog
 url: http://instagram.com/p/blablablah
 url: http://itam.mx/test
 http://instagram.com/p/blablablah
