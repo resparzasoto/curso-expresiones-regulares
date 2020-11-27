@@ -70,6 +70,7 @@
     - [Ejemplo](#ejemplo-23)
       - [Solución](#solución-3)
   - [Explicación del Proyecto](#explicación-del-proyecto)
+  - [Perl](#perl)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -515,4 +516,6 @@ Usaremos las expresiones regulares en:
 - PHP
 - Python
 - Javascript
+
+## Perl
 
