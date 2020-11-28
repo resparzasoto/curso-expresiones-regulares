@@ -75,6 +75,7 @@
   - [Utilizando PHP en la práctica](#utilizando-php-en-la-práctica)
     - [Banderas](#banderas)
     - [Tabs](#tabs)
+  - [Python](#python)
 
 ## 2. El lenguaje: caracteres, operadores, y construcciones
 
@@ -543,3 +544,5 @@ Las expresiones regulares pueden tener banderas que afectan la búsqueda, estás
 ### Tabs
 
 Los tabs `\t` por lo particular intentan recorrer múltiplos de 8 espacios, aunque esto depende del OS.
+
+## Python
